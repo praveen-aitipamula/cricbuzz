@@ -1,17 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Cricbuzz Clone</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricbuzz</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
 
-<nav>
-    <a href="/">Home</a>
-    <a href="#">Teams</a>
-    <a href="#">Schedule</a>
-    <a href="#">Stats</a>
-    <a href="#">IPL</a>
-    <a href="#">More</a>
+<nav class="navbar">
+
+    <div class="logo">
+        Cricbuzz
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="#">Teams</a></li>
+        <li><a href="#">Schedule</a></li>
+        <li><a href="#">Stats</a></li>
+        <li><a href="#">IPL</a></li>
+
+        <li class="dropdown">
+            <a href="#">More ▼</a>
+        </li>
+    </ul>
+
 </nav>
 
 {% block content %}
