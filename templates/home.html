@@ -1,5 +1,63 @@
 {% extends "base.html" %}
 {% block content %}
-    <p>Welcome to Cricbuzz</p>
+    
+    <div class="container">
+
+    <section class="section">
+        <h2>Live Matches</h2>
+
+        <div class="card">
+            <h3>RCB vs CSK</h3>
+            <p>RCB - 185/5 (20)</p>
+            <p>CSK - 180/8 (20)</p>
+            <strong>RCB won by 5 runs</strong>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Upcoming Matches</h2>
+
+        <div class="card">
+            <h3>MI vs SRH</h3>
+            <p>Tomorrow - 7:30 PM</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>IPL Points Table</h2>
+
+        <table>
+            <tr>
+                <th>Team</th>
+                <th>Pts</th>
+            </tr>
+
+            <tr>
+                <td>RCB</td>
+                <td>18</td>
+            </tr>
+
+            <tr>
+                <td>GT</td>
+                <td>16</td>
+            </tr>
+
+            <tr>
+                <td>MI</td>
+                <td>14</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="section">
+        <h2>Top Players</h2>
+
+        <div class="card">
+            <p>Virat Kohli - 650 Runs</p>
+            <p>Jasprit Bumrah - 22 Wickets</p>
+        </div>
+    </section>
+
+</div>
     
 {% endblock %}
