@@ -1,9 +1,34 @@
-{% for team in teams %}
+{% extends "base.html" %}
 
-<div class="team-card">
+{% block content %}
+
+<h1>Teams</h1>
+
+<div class="teams-container">
+
+    {% for team in teams %}
     
-    <h3>{{ team.name }}</h3>
-    <p>{{ team.short_name }}</p>
+    <div class="team-card">
+
+        {% if team.flag %}
+            <img
+                src="{{ team.flag.url }}"
+                alt="{{ team.name }}"
+                class="team-flag"
+            >
+        {% endif %}
+        
+        <h2>{{ team.name }}</h2>
+        <p>{{ team.short_name }}</p>
+        
+
+        <a href="{% url 'team_detail' team.id %}">
+            View Team
+        </a>
+    </div>
+
+    {% endfor %}
+
 </div>
 
-{% endfor %}
+{% endblock %}

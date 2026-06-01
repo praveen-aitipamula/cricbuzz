@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if team.flag %}
+            <img
+                src="{{ team.flag.url }}"
+                alt="{{ team.name }}"
+                class="team-flag"
+            >
+        {% endif %}
+
+<h1>{{ team.name }}</h1>
+
+<h2>Players</h2>
+
+<div class="players-container">
+
+    {% for player in players %}
+
+    <div class="player-card">
+
+        <h3>{{ player.name }}</h3>
+
+        <p>
+            {{ player.get_role_display }}
+        </p>
+
+    </div>
+
+    {% empty %}
+
+    <p>No players found.</p>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}
