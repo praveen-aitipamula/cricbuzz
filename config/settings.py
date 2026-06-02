@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     "home",
     "teams",
     "players",
+    "franchises",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",

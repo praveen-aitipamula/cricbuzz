@@ -1,18 +1,33 @@
+
 {% extends "base.html" %}
 
 {% block content %}
-
+{% load static %}
 <h1>Players</h1>
 
 <div class="players-container">
 
     {% for player in players %}
     
+   
     <div class="player-card">
-
-        <div class="player-avatar">
-            {{ player.name|first }}
-        </div>
+         <a href="{% url 'player_detail' player.id %}">
+        
+    
+        {% if player.image %}
+            <img
+                src="{{ player.image.url }}"
+                alt="{{ player.name }}"
+                class="player-profile"
+            >
+        {% else %}
+            <img
+                src="{% static 'images/profiles/default.jpg' %}"
+                alt="Default Player"
+                class="player-profile"
+            >
+        {% endif %}
+        </a>
 
         <h3>{{ player.name }}</h3>
 
@@ -23,8 +38,10 @@
         <div class="role">
             {{ player.get_role_display }}
         </div>
+         
 
     </div>
+    
 
     {% endfor %}
 

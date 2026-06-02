@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="player-detail">
+
+    {% if player.image %}
+        <img
+            src="{{ player.image.url }}"
+            class="player-detail-image"
+        >
+    {% else %}
+        <img
+            src="{% static 'images/default-player.png' %}"
+            class="player-detail-image"
+        >
+    {% endif %}
+
+    <h1>{{ player.name }}</h1>
+
+    <h3>{{ player.team.name }}</h3>
+
+    <div class="player-info">
+
+        <p>
+            <strong>Role:</strong>
+            {{ player.get_role_display }}
+        </p>
+
+        
+
+        <p>
+            <strong>Jersey Number:</strong>
+            {{ player.jersey_number }}
+        </p>
+
+        <p>
+            <strong>Batting Style:</strong>
+            {{ player.batting_style }}
+        </p>
+
+        <p>
+            <strong>Bowling Style:</strong>
+            {{ player.bowling_style }}
+        </p>
+
+        <p>
+            <strong>Date of Birth:</strong>
+            {{ player.date_of_birth }}
+        </p>
+
+    </div>
+
+    <h2>Biography</h2>
+
+    <p>
+        {{ player.bio }}
+    </p>
+
+</div>
+
+{% endblock %}

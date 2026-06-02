@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 class="page-title">IPL Franchises</h1>
+
+<div class="franchise-container">
+
+    {% for franchise in franchises %}
+
+    <div class="franchise-card">
+
+        {% if franchise.logo %}
+            <img
+                src="{{ franchise.logo.url }}"
+                alt="{{ franchise.name }}"
+                class="franchise-logo"
+            >
+        {% endif %}
+
+        <h2>{{ franchise.name }}</h2>
+
+        <a
+            href="{% url 'franchise_detail' franchise.id %}"
+            class="view-details"    
+        >
+            View Details
+        </a>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}

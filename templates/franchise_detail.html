@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}{{ franchise.name }}{% endblock %}
+
+{% block content %}
+    <h1>{{ franchise.name }}</h1>
+    <p>{{ franchise.short_name }}</p>
+    <h2>Squad</h2>
+    <ul>
+        {% for squad_member in franchise.franchisesquad_set.all %}
+            <li>{{ squad_member.player.name }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

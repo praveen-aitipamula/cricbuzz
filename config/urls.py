@@ -26,6 +26,7 @@ urlpatterns = [
     path("", include("home.urls")),
     path("teams/", include("teams.urls")),
     path("players/", include("players.urls")),
+    path("franchises/", include("franchises.urls")),
 ]
 
 if settings.DEBUG:
