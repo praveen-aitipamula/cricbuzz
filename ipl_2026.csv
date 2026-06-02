@@ -1,0 +1,150 @@
+name,country,role,batting_style,bowling_style,image
+Virat Kohli,India,Batter,Right-hand Bat,,virat.jpg
+Phil Salt,England,Wicket Keeper,Right-hand Bat,,rcb_jersey.jpg
+Rajat Patidar,India,Batter,Right-hand Bat,,rajat.jpg
+Jitesh Sharma,India,Wicket Keeper,Right-hand Bat,,rcb_jersey.jpg
+Devdutt Padikkal,India,Batter,Right-hand Bat,,rcb_jersey.jpg
+Tim David,Australia,All Rounder,Right-hand Bat,,rcb_jersey.jpg
+Krunal Pandya,India,All Rounder,Right-hand Bat,,rcb_jersey.jpg
+Bhuvneshwar Kumar,India,Bowler,Right-hand Bat,,bhuvi.jpg
+Josh Hazlewood,Australia,Bowler,Right-hand Bat,,rcb_jersey.jpg
+Yash Dayal,India,Bowler,Right-hand Bat,,rcb_jersey.jpg
+Suyash Sharma,India,Bowler,Right-hand Bat,,rcb_jersey.jpg
+Jacob Bethell,England,All Rounder,Right-hand Bat,,rcb_jersey.jpg
+Romario Shepherd,West Indies,All Rounder,Right-hand Bat,,rcb_jersey.jpg
+Nuwan Thushara,Sri Lanka,Bowler,Right-hand Bat,,rcb_jersey.jpg
+Rasikh Salam,India,Bowler,Right-hand Bat,,rcb_jersey.jpg
+Ruturaj Gaikwad,India,Batter,Right-hand Bat,,ruturaj.jpg
+MS Dhoni,India,Wicket Keeper,Right-hand Bat,,csk_jersey.jpg
+Sanju Samson,India,Wicket Keeper,Right-hand Bat,,sanju.jpg
+Dewald Brevis,South Africa,Batter,Right-hand Bat,,csk_jersey.jpg
+Ravindra Jadeja,India,All Rounder,Right-hand Bat,,rr_jersey.jpg
+Shivam Dube,India,All Rounder,Right-hand Bat,,csk_jersey.jpg
+Rachin Ravindra,New Zealand,All Rounder,Right-hand Bat,,csk_jersey.jpg
+Noor Ahmad,Afghanistan,Bowler,Right-hand Bat,,csk_jersey.jpg
+Matheesha Pathirana,Sri Lanka,Bowler,Right-hand Bat,,csk_jersey.jpg
+R Ashwin,India,All Rounder,Right-hand Bat,,csk_jersey.jpg
+Matthew Short,Australia,All Rounder,Right-hand Bat,,csk_jersey.jpg
+Ayush Mhatre,India,Batter,Right-hand Bat,,csk_jersey.jpg
+Prashant Veer,India,All Rounder,Right-hand Bat,,csk_jersey.jpg
+Gurjapneet Singh,India,Bowler,Right-hand Bat,,csk_jersey.jpg
+Sarfaraz Khan,India,Batter,Right-hand Bat,,csk_jersey.jpg
+Rohit Sharma,India,Batter,Right-hand Bat,,rohit.jpg
+Suryakumar Yadav,India,Batter,Right-hand Bat,,surya.jpg
+Hardik Pandya,India,All Rounder,Right-hand Bat,,mi_jersey.jpg
+Jasprit Bumrah,India,Bowler,Right-hand Bat,,bhumra.jpg
+Tilak Varma,India,Batter,Right-hand Bat,,mi_jersey.jpg
+Trent Boult,New Zealand,Bowler,Right-hand Bat,,mi_jersey.jpg
+Naman Dhir,India,All Rounder,Right-hand Bat,,mi_jersey.jpg
+Robin Minz,India,Wicket Keeper,Right-hand Bat,,mi_jersey.jpg
+Will Jacks,England,All Rounder,Right-hand Bat,,mi_jersey.jpg
+Mitchell Santner,New Zealand,All Rounder,Right-hand Bat,,mi_jersey.jpg
+Deepak Chahar,India,Bowler,Right-hand Bat,,mi_jersey.jpg
+Reece Topley,England,Bowler,Right-hand Bat,,mi_jersey.jpg
+Mujeeb Ur Rahman,Afghanistan,Bowler,Right-hand Bat,,mi_jersey.jpg
+Arjun Tendulkar,India,All Rounder,Right-hand Bat,,lsg_jersey.jpg
+Karn Sharma,India,Bowler,Right-hand Bat,,mi_jersey.jpg
+Ajinkya Rahane,India,Batter,Right-hand Bat,Right-arm Medium,rahane.jpg
+Rinku Singh,India,Batter,Left-hand Bat,Right-arm Offbreak,kkr_jersey.jpg
+Quinton de Kock,South Africa,Wicket Keeper,Left-hand Bat,,mi_jersey.jpg
+Rahmanullah Gurbaz,Afghanistan,Wicket Keeper,Right-hand Bat,,kkr_jersey.jpg
+Venkatesh Iyer,India,All Rounder,Left-hand Bat,Right-arm Medium,rcb_jersey.jpg
+Moeen Ali,England,All Rounder,Left-hand Bat,Right-arm Offbreak,kkr_jersey.jpg
+Sunil Narine,West Indies,All Rounder,Left-hand Bat,Right-arm Offbreak,kkr_jersey.jpg
+Varun Chakravarthy,India,Bowler,Right-hand Bat,Right-arm Legbreak,kkr_jersey.jpg
+Anrich Nortje,South Africa,Bowler,Right-hand Bat,Right-arm Fast,kkr_jersey.jpg
+Harshit Rana,India,Batter,Right-hand Bat,,kkr_jersey.jpg
+Spencer Johnson,Australia,Bowler,Left-hand Bat,Left-arm Fast,kkr_jersey.jpg
+Chetan Sakariya,India,Bowler,Left-hand Bat,Left-arm Medium Fast,kkr_jersey.jpg
+Mayank Markande,India,Batter,Right-hand Bat,,kkr_jersey.jpg
+Luvnith Sisodia,India,Wicket Keeper,Left-hand Bat,,kkr_jersey.jpg
+Angkrish Raghuvanshi,India,Batter,Right-hand Bat,,kkr_jersey.jpg
+Pat Cummins,Australia,All Rounder,Right-hand Bat,Right-arm Fast,srh_jersey.jpg
+Ishan Kishan,India,Wicket Keeper,Left-hand Bat,,srh_jersey.jpg
+Abhishek Sharma,India,All Rounder,Left-hand Bat,Left-arm Orthodox,abhishek.jpg
+Travis Head,Australia,Batter,Left-hand Bat,Right-arm Offbreak,head.jpg
+Heinrich Klaasen,South Africa,Wicket Keeper,Right-hand Bat,,srh_jersey.jpg
+Nitish Kumar Reddy,India,All Rounder,Right-hand Bat,Right-arm Medium Fast,nitish.jpg
+Harshal Patel,India,Bowler,Right-hand Bat,Right-arm Medium Fast,srh_jersey.jpg
+Mohammed Shami,India,Bowler,Right-hand Bat,Right-arm Fast,srh_jersey.jpg
+Rahul Chahar,India,Bowler,Right-hand Bat,Right-arm Legbreak,srh_jersey.jpg
+Adam Zampa,Australia,Bowler,Right-hand Bat,Right-arm Legbreak,srh_jersey.jpg
+Atharva Taide,India,Batter,Right-hand Bat,,srh_jersey.jpg
+Kamindu Mendis,Sri Lanka,All Rounder,Left-hand Bat,Slow Left-arm Orthodox,srh_jersey.jpg
+Jaydev Unadkat,India,Batter,Right-hand Bat,,srh_jersey.jpg
+Simarjeet Singh,India,Batter,Right-hand Bat,,srh_jersey.jpg
+Eshan Malinga,Sri Lanka,Bowler,Right-hand Bat,Right-arm Fast,srh_jersey.jpg
+Yashasvi Jaiswal,India,Batter,Right-hand Bat,,yashasvi_jaiswal.jpg
+Riyan Parag,India,Batter,Right-hand Bat,,parag.jpg
+Shimron Hetmyer,West Indies,Batter,Left-hand Bat,,rr_jersey.jpg
+Dhruv Jurel,India,Batter,Right-hand Bat,,rr_jersey.jpg
+Jofra Archer,England,Bowler,Right-hand Bat,Right-arm Fast,rr_jersey.jpg
+Wanindu Hasaranga,Sri Lanka,All Rounder,Right-hand Bat,Right-arm Legbreak,rr_jersey.jpg
+Maheesh Theekshana,Sri Lanka,Bowler,Right-hand Bat,Offbreak,rr_jersey.jpg
+Tushar Deshpande,India,Batter,Right-hand Bat,,rr_jersey.jpg
+Sandeep Sharma,India,Batter,Right-hand Bat,,rr_jersey.jpg
+Nandre Burger,South Africa,Bowler,Right-hand Bat,Left-arm Fast,rr_jersey.jpg
+Vaibhav Suryavanshi,India,Batter,Right-hand Bat,,vaibav.jpg
+Akash Madhwal,India,Batter,Right-hand Bat,,rr_jersey.jpg
+Kumar Kartikeya,India,Batter,Right-hand Bat,,rr_jersey.jpg
+Shubham Dubey,India,Batter,Right-hand Bat,,rr_jersey.jpg
+Axar Patel,India,Batter,Right-hand Bat,,axar.jpg
+KL Rahul,India,Batter,Right-hand Bat,,kl.jpg
+Kuldeep Yadav,India,Batter,Right-hand Bat,,dc_jersey.jpg
+Mitchell Starc,Australia,Bowler,Left-hand Bat,Left-arm Fast,dc_jersey.jpg
+Tristan Stubbs,South Africa,Batter,Right-hand Bat,Offbreak,dc_jersey.jpg
+Jake Fraser-McGurk,Australia,Batter,Right-hand Bat,Offbreak,dc_jersey.jpg
+T Natarajan,India,Batter,Right-hand Bat,,dc_jersey.jpg
+Mukesh Kumar,India,Batter,Right-hand Bat,,dc_jersey.jpg
+Ashutosh Sharma,India,Batter,Right-hand Bat,,dc_jersey.jpg
+Sameer Rizvi,India,Batter,Right-hand Bat,,dc_jersey.jpg
+Karun Nair,India,Batter,Right-hand Bat,,dc_jersey.jpg
+Donovan Ferreira,South Africa,Wicket Keeper,Right-hand Bat,Offbreak,dc_jersey.jpg
+Dushmantha Chameera,Sri Lanka,Bowler,Right-hand Bat,Right-arm Fast,dc_jersey.jpg
+Mohit Sharma,India,Batter,Right-hand Bat,,dc_jersey.jpg
+Vipraj Nigam,India,Batter,Right-hand Bat,,dc_jersey.jpg
+Shubman Gill,India,Batter,Right-hand Bat,,gill.jpg
+Sai Sudharsan,India,Batter,Right-hand Bat,,sai.jpg
+Jos Buttler,England,Wicket Keeper,Right-hand Bat,,gt_jersey.jpg
+Rashid Khan,India,Batter,Right-hand Bat,,gt_jersey.jpg
+Mohammed Siraj,India,Batter,Right-hand Bat,,siraj.jpg
+Prasidh Krishna,India,Batter,Right-hand Bat,,gt_jersey.jpg
+Washington Sundar,India,Batter,Right-hand Bat,,gt_jersey.jpg
+Rahul Tewatia,India,Batter,Right-hand Bat,,gt_jersey.jpg
+Sherfane Rutherford,West Indies,Batter,Left-hand Bat,Right-arm Medium,gt_jersey.jpg
+Gerald Coetzee,South Africa,Bowler,Right-hand Bat,Right-arm Fast,gt_jersey.jpg
+Kagiso Rabada,South Africa,Bowler,Left-hand Bat,Right-arm Fast,gt_jersey.jpg
+Sai Kishore,India,Batter,Right-hand Bat,,gt_jersey.jpg
+Arshad Khan,India,Batter,Right-hand Bat,,gt_jersey.jpg
+Shahrukh Khan,India,Batter,Right-hand Bat,,gt_jersey.jpg
+Glenn Phillips,New Zealand,Wicket Keeper,Right-hand Bat,Offbreak,gt_jersey.jpg
+Shreyas Iyer,India,Batter,Right-hand Bat,,shreyas.jpg
+Arshdeep Singh,India,Batter,Right-hand Bat,,pbks_jersey.jpg
+Yuzvendra Chahal,India,Batter,Right-hand Bat,,pbks_jersey.jpg
+Marcus Stoinis,Australia,All Rounder,Right-hand Bat,Right-arm Medium,pbks_jersey.jpg
+Marco Jansen,South Africa,All Rounder,Left-hand Bat,Left-arm Fast,pbks_jersey.jpg
+Glenn Maxwell,Australia,All Rounder,Right-hand Bat,Offbreak,pbks_jersey.jpg
+Prabhsimran Singh,India,Batter,Right-hand Bat,,pbks_jersey.jpg
+Josh Inglis,Australia,Wicket Keeper,Right-hand Bat,,pbks_jersey.jpg
+Nehal Wadhera,India,Batter,Right-hand Bat,,pbks_jersey.jpg
+Azmatullah Omarzai,Afghanistan,All Rounder,Right-hand Bat,Right-arm Medium Fast,pbks_jersey.jpg
+Harpreet Brar,India,Batter,Right-hand Bat,,pbks_jersey.jpg
+Vijaykumar Vyshak,India,Batter,Right-hand Bat,,pbks_jersey.jpg
+Lockie Ferguson,New Zealand,Bowler,Right-hand Bat,Right-arm Fast,pbks_jersey.jpg
+Priyansh Arya,India,Batter,Right-hand Bat,,priyansh.jpg
+Yash Thakur,India,Batter,Right-hand Bat,,pbks_jersey.jpg
+Rishabh Pant,India,Batter,Right-hand Bat,,rishab.jpg
+Nicholas Pooran,West Indies,Wicket Keeper,Left-hand Bat,,lsg_jersey.jpg
+Aiden Markram,South Africa,All Rounder,Right-hand Bat,Offbreak,lsg_jersey.jpg
+Mitchell Marsh,Australia,All Rounder,Right-hand Bat,Right-arm Medium Fast,lsg_jersey.jpg
+David Miller,South Africa,Batter,Left-hand Bat,,lsg_jersey.jpg
+Abdul Samad,India,Batter,Right-hand Bat,,lsg_jersey.jpg
+Ayush Badoni,India,Batter,Right-hand Bat,,lsg_jersey.jpg
+Shardul Thakur,India,Batter,Right-hand Bat,,lsg_jersey.jpg
+Avesh Khan,India,Batter,Right-hand Bat,,lsg_jersey.jpg
+Akash Deep,India,Batter,Right-hand Bat,,lsg_jersey.jpg
+Digvesh Rathi,India,Batter,Right-hand Bat,,lsg_jersey.jpg
+Prince Yadav,India,Batter,Right-hand Bat,,lsg_jersey.jpg
+Ravi Bishnoi,India,Batter,Right-hand Bat,,lsg_jersey.jpg
+Matthew Breetzke,South Africa,Batter,Right-hand Bat,,lsg_jersey.jpg
+Mohsin Khan,India,Batter,Right-hand Bat,,lsg_jersey.jpg

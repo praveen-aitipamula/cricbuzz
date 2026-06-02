@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<h1 class="page-title">IPL Franchises</h1>
+
 
 <div class="franchise-container">
 
@@ -18,8 +18,7 @@
             >
         {% endif %}
 
-        <h2>{{ franchise.name }}</h2>
-
+        <h4>{{ franchise.name }}</h4>
         <a
             href="{% url 'franchise_detail' franchise.id %}"
             class="view-details"    

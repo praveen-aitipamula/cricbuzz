@@ -1,14 +1,44 @@
 {% extends "base.html" %}
 
-{% block title %}{{ franchise.name }}{% endblock %}
-
 {% block content %}
-    <h1>{{ franchise.name }}</h1>
-    <p>{{ franchise.short_name }}</p>
-    <h2>Squad</h2>
-    <ul>
-        {% for squad_member in franchise.franchisesquad_set.all %}
-            <li>{{ squad_member.player.name }}</li>
-        {% endfor %}
-    </ul>
+
+<h1>{{ franchise.name }}</h1>
+
+<div class="players-container">
+
+{% for member in squad %}
+
+    <div class="player-card">
+
+        {% if member.player.image %}
+        <a href="{% url 'ipl_player_detail' member.player.id %}">       
+        <img
+                src="{{ member.player.image.url }}"
+                class="player-profile"
+                alt="{{ member.player.name }}"
+            >
+        </a>
+
+        {% endif %}
+        
+
+        
+        <h3>
+            {{ member.player.name }}
+             {% if member.player.role == "Wicket Keeper" %}
+                🧤
+            {% endif %}
+            {% if member.player.country != "India" %}
+                ✈️
+            {% endif %}
+        </h3>
+
+        <p>{{ member.player.get_role_display }}</p>
+
+    </div>
+
+{% endfor %}
+
+</div>
+
 {% endblock %}

@@ -8,7 +8,11 @@ def franchise(request):
 
 def franchise_detail(request, franchise_id):
     franchise = get_object_or_404(Franchise, id=franchise_id)
+    squad = franchise.squad.select_related(
+        "player"
+    )
     context = {
         "franchise": franchise,
+        "squad": squad
     }
     return render(request, "franchise_detail.html", context)

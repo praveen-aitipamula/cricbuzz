@@ -15,7 +15,7 @@ class Franchise(models.Model):
         return self.short_name
     
 class FranchiseSquad(models.Model):
-    franchise = models.ForeignKey(Franchise, on_delete=models.CASCADE)
+    franchise = models.ForeignKey(Franchise, on_delete=models.CASCADE,related_name="squad")
     player = models.ForeignKey(IPL_Player, on_delete=models.CASCADE)
 
     class Meta:

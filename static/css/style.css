@@ -243,12 +243,11 @@ table th {
 }
 
 .franchise-container {
-    display: grid;
+     display: grid;
 
-    grid-template-columns:
-        repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
 
-    gap: 25px;
+    gap: 20px;
 
     padding: 20px;
 }
@@ -274,15 +273,13 @@ table th {
 }
 
 .franchise-logo {
-    width: 120px;
-    height: 120px;
-
+    width: 80px;
+    height: 80px;
     object-fit: contain;
-
-    margin-bottom: 15px;
 }
 
 .franchise-card h2 {
+    padding: 15px;
     font-size: 20px;
 
     margin-bottom: 15px;
@@ -308,4 +305,118 @@ table th {
 
 .view-btn:hover {
     background: #00785c;
+}
+.player-detail-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.player-header {
+    display: flex;
+    gap: 30px;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+    margin-bottom: 25px;
+}
+
+.player-detail-image {
+    width: 180px;
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+}
+
+.player-basic-info h1 {
+    margin-bottom: 10px;
+}
+
+.role-badge {
+    background: #009270;
+
+    color: white;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+
+    display: inline-block;
+
+    margin-bottom: 15px;
+}
+
+.player-info-card,
+.player-stats-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+    margin-bottom: 20px;
+}
+
+.info-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.info-item {
+    padding: 15px;
+
+    background: #f5f5f5;
+
+    border-radius: 8px;
+}
+
+.label {
+    display: block;
+
+    font-weight: bold;
+
+    color: #009270;
+
+    margin-bottom: 5px;
+}
+
+.view-details {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 10px 18px;
+
+    background-color: #009270;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.view-details:hover {
+    background-color: #00785c;
+
+    transform: translateY(-2px);
 }

@@ -99,7 +99,7 @@ class IPL_Player(models.Model):
     )
 
     image = models.ImageField(
-        upload_to="player_images/",
+        upload_to="ipl_player_images/",
         blank=True,
         null=True
     )
