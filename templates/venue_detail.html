@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="venue-detail-container">
+
+    <div class="venue-image-section">
+
+        <img
+            src="{{ venue.image.url }}"
+            alt="{{ venue.name }}"
+            class="venue-detail-image"
+        >
+
+    </div>
+
+    <div class="venue-info-section">
+
+        <h1>{{ venue.name }}</h1>
+
+        <div class="venue-info-card">
+
+            <p>
+                <strong>📍 City:</strong>
+                {{ venue.city }}
+            </p>
+
+            <p>
+                <strong>🏟 Capacity:</strong>
+                {{ venue.capacity }}
+            </p>
+
+            <p>
+                <strong>🏠 Home Ground:</strong>
+                {{ venue.home_ground }}
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

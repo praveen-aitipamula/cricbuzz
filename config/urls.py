@@ -28,6 +28,7 @@ urlpatterns = [
     path("players/", include("players.urls")),
     path("ipl_players/", include("players.urls")),
     path("franchises/", include("franchises.urls")),
+    path("venues/", include("venues.urls")),
 ]
 
 if settings.DEBUG:
