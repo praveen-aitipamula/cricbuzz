@@ -29,3 +29,18 @@ class FranchiseSquad(models.Model):
 
     def __str__(self):
         return f"{self.franchise.short_name} - {self.player.name}"
+
+class FranchisePlaying11(models.Model):
+    franchise = models.ForeignKey(Franchise, on_delete=models.CASCADE, related_name="playing11")
+    player = models.ForeignKey(IPL_Player, on_delete=models.CASCADE)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["player"],
+                name="unique_player_playing11"
+            )
+        ]
+
+    def __str__(self):
+        return f"{self.franchise.short_name} - {self.player.name}"

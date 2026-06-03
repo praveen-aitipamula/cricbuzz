@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<h1 class="page-title">{{ franchise.name }} - Playing 11</h1>
+<div class="players-container">
+
+{% for member in playing11 %}
+
+    <div class="player-card">
+
+        {% if member.player.image %}
+        <a href="{% url 'ipl_player_detail' member.player.id %}">       
+        <img
+                src="{{ member.player.image.url }}"
+                class="player-profile"
+                alt="{{ member.player.name }}"
+            >
+        </a>
+
+        {% endif %}
+        
+
+        
+        <h3>
+            {{ member.player.name }}
+             {% if member.player.role == "Wicket Keeper" %}
+                🧤
+            {% endif %}
+            {% if member.player.country != "India" %}
+                ✈️
+            {% endif %}
+        </h3>
+
+        <p>{{ member.player.get_role_display }}</p>
+
+    </div>
+
+
+{% endfor %}
+{% endblock %}

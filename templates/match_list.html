@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="page-title">IPL 2026 Schedule</h2>
+
+<div class="matches-list">
+
+    {% for match in matches %}
+
+    <div class="match-row">
+
+        <div class="match-left">
+
+            <div class="match-header">
+
+                <span class="match-number">
+                    Match {{ match.match_number }}
+                </span>
+
+                <span class="status-badge">
+                    {{ match.status }}
+                </span>
+
+            </div>
+
+            <h3>
+                {{ match.team1.short_name }}
+                <span class="vs">vs</span>
+                {{ match.team2.short_name }}
+            </h3>
+
+            <div class="match-meta-list">
+
+                <span>
+                    📍 {{ match.venue.name }}
+                </span>
+
+                <span>
+                    📅 {{ match.match_date }}
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="match-right">
+
+            <a
+                href="{% url 'match_detail' match.id %}"
+                class="view-btn"
+            >
+                View Match
+            </a>
+
+        </div>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}

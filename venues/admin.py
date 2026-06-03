@@ -6,8 +6,8 @@ from .models import Venue
 class VenueAdmin(admin.ModelAdmin):
     list_display = ("name", "city", "capacity", "home_ground")
     search_fields = ("name", "city")
-    list_filter = ("city",)     
+    list_filter = ("name","city",)     
 
 
 
-            
+
