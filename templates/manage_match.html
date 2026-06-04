@@ -2,47 +2,120 @@
 
 {% block content %}
 
-<h1>
-    {{ match.team1.short_name }}
-    vs
-    {{ match.team2.short_name }}
-</h1>
+<div class="manage-match-container">
 
-<div>
+    <h5 class="match-title">
+        {{ match.team1.short_name }}
+        <span>VS</span>
+        {{ match.team2.short_name }}
+    </h5>
 
-    <h2>
-        {{ match.team1.short_name }} Default XI
-    </h2>
+    <div class="playing-xi-wrapper">
 
-    <ul>
-        {% for player in team1_xi %}
-            <li>{{ player.player.name }}</li>
-        {% endfor %}
-    </ul>
+        <!-- Team 1 -->
+        <div class="team-card">
+
+            <h2>
+                {{ match.team1.short_name }} Playing XI
+            </h2>
+
+            <div class="players-grid">
+
+                {% for item in team1_xi %}
+
+                <div class="player-card">
+
+                    <img
+                        src="{{ item.player.image.url }}"
+                        alt="{{ item.player.name }}"
+                        class="player-img"
+                    >
+
+                    <div class="player-info">
+
+                        <div class="player-name">
+                            {{ item.player.name }}
+
+                            {% if item.player.country != "India" %}
+                                ✈️
+                            {% endif %}
+
+                            {% if item.player.role == "WK" %}
+                                🧤
+                            {% endif %}
+                        </div>
+
+                        <div class="player-role">
+                            {{ item.player.get_role_display }}
+                        </div>
+
+                    </div>
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+        <!-- Team 2 -->
+        <div class="team-card">
+
+            <h2>
+                {{ match.team2.short_name }} Playing XI
+            </h2>
+
+            <div class="players-grid">
+
+                {% for item in team2_xi %}
+
+                <div class="player-card">
+
+                    <img
+                        src="{{ item.player.image.url }}"
+                        alt="{{ item.player.name }}"
+                        class="player-img"
+                    >
+
+                    <div class="player-info">
+
+                        <div class="player-name">
+                            {{ item.player.name }}
+
+                            {% if item.player.country != "India" %}
+                                ✈️
+                            {% endif %}
+
+                            {% if item.player.role == "WK" %}
+                                🧤
+                            {% endif %}
+                        </div>
+
+                        <div class="player-role">
+                            {{ item.player.get_role_display }}
+                        </div>
+
+                    </div>
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <form method="POST" class="confirm-form">
+        {% csrf_token %}
+
+        <button type="submit" class="confirm-btn">
+            Confirm Playing XI
+        </button>
+    </form>
 
 </div>
-
-<hr>
-
-<div>
-
-    <h2>
-        {{ match.team2.short_name }} Default XI
-    </h2>
-
-    <ul>
-        {% for player in team2_xi %}
-            <li>{{ player.player.name }}</li>
-        {% endfor %}
-    </ul>
-
-</div>
-<form method="POST">
-    {% csrf_token %}
-
-    <button type="submit">
-        Confirm Playing XI
-    </button>
-</form>
 
 {% endblock %}

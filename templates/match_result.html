@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="result-page">
+
+    <div class="result-card">
+
+        <h2 class="match-title">
+            {{ match.team1.short_name }}
+            <span>VS</span>
+            {{ match.team2.short_name }}
+        </h2>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <div class="winner-section">
+
+                <label>Winner</label>
+
+                <select name="winner" required>
+                    <option value="">Select Winner</option>
+
+                    <option value="{{ match.team1.id }}">
+                        {{ match.team1.short_name }}
+                    </option>
+
+                    <option value="{{ match.team2.id }}">
+                        {{ match.team2.short_name }}
+                    </option>
+
+                </select>
+
+            </div>
+
+            <table class="result-table">
+
+                <thead>
+                    <tr>
+                        <th>Team</th>
+                        <th>Runs</th>
+                        <th>Wickets</th>
+                        <th>Overs</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>
+                            <strong>{{ match.team1.short_name }}</strong>
+                        </td>
+
+                        <td>
+                            <input type="number"
+                                   name="team1_score"
+                                   required>
+                        </td>
+
+                        <td>
+                            <input type="number"
+                                   name="team1_wickets"
+                                   required>
+                        </td>
+
+                        <td>
+                            <input type="text"
+                                   name="team1_overs"
+                                   required>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <strong>{{ match.team2.short_name }}</strong>
+                        </td>
+
+                        <td>
+                            <input type="number"
+                                   name="team2_score"
+                                   required>
+                        </td>
+
+                        <td>
+                            <input type="number"
+                                   name="team2_wickets"
+                                   required>
+                        </td>
+
+                        <td>
+                            <input type="text"
+                                   name="team2_overs"
+                                   required>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <button type="submit" class="save-result-btn">
+                Save Result
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

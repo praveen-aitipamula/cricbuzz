@@ -5,8 +5,52 @@
 <div class="match-detail-container">
 
     <div class="match-card">
+        {% if match.status == "Completed" %}
 
+<div class="match-result-box">
+
+    <div class="winner-text">
+        {{ match.result }}
+    </div>
+
+    <div class="score-row">
+
+        <div class="score-team">
+            <strong>{{ match.team1.short_name }}</strong>
+            {{ match.team1_score }}/{{ match.team1_wickets }}
+            ({{ match.team1_overs }})
+        </div>
+
+        <div class="score-team">
+            <strong>{{ match.team2.short_name }}</strong>
+            {{ match.team2_score }}/{{ match.team2_wickets }}
+            ({{ match.team2_overs }})
+        </div>
         
+            
+        
+
+    </div>
+    {{ match.result }}  
+
+</div>
+
+{% endif %}
+
+        <div class="match-status {{ match.status|lower }}">
+            {{ match.status }}
+            
+
+        </div>
+        
+        {% if match.status == "Completed" %}
+
+
+
+{% endif %}
+
+
+
 
         <h3 class="match-title">
             {{ match.team1.short_name }}
@@ -53,13 +97,28 @@
     <span>📅 {{ match.match_date }}</span>
 </div>
 
-        <div class="action-buttons">
+        
+        {% if match.status == "Scheduled" %}
+
+            <div class="action-buttons">
 
             <a href="{% url 'manage_match' match.id %}" class="manage-btn">
                 Manage Match
             </a>
 
         </div>
+
+        {% elif match.status == "Playing11 Confirmed" %}
+
+            <div class="action-buttons">
+
+            <a class="manage-btn"
+                href="{% url 'match_result' match.id %}"
+            >
+                Enter Match Result
+            </a>
+
+        {% endif %}
 
     </div>
 
