@@ -1,3 +1,5 @@
+from multiprocessing import context
+
 from django.shortcuts import redirect, render
 from .models import Match
 from franchises.models import FranchisePlaying11,MatchPlaying11
@@ -37,7 +39,8 @@ def ManageMatchView(request, pk):
                 player=item.player
             )
 
-        print("Playing XI Created")
+        match.status = "Playing11 Confirmed"
+        match.save()
         return redirect(
             "match_detail",
             pk=match.id
@@ -56,3 +59,48 @@ def ManageMatchView(request, pk):
         "team2_xi": team2_xi,   
     }
     return render(request, "manage_match.html", context)
+
+def MatchResultView(request, pk):
+    match = Match.objects.get(id=pk)
+    if request.method == "POST":
+        match.team1_score = int(request.POST.get("team1_score"))
+        match.team1_wickets = int(request.POST.get("team1_wickets"))
+        match.team1_overs = request.POST.get("team1_overs")
+        match.team2_score = int(request.POST.get("team2_score"))
+        match.team2_wickets = int(request.POST.get("team2_wickets"))
+        match.team2_overs = request.POST.get("team2_overs")
+        if match.team1_score > match.team2_score:   
+            match.winner = match.team1
+            match.result = (
+                f"{match.team1.short_name} won by "
+                f"{match.team1_score - match.team2_score} runs"
+            )
+
+        else:
+
+            match.winner = match.team2
+
+            wickets_remaining = (
+                10 - int(request.POST.get("team2_wickets"))
+            )
+
+            match.result = (
+                f"{match.team2.short_name} won by "
+                f"{wickets_remaining} wickets"
+            )
+
+
+        
+        
+        
+        match.status = "Completed"
+        match.save()
+        return redirect(
+            "match_detail",
+            pk=match.id
+        )
+    context = {
+        "match": match,
+    }
+    return render(request, "match_result.html", context)
+    
