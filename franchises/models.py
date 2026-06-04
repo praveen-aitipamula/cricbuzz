@@ -1,5 +1,6 @@
 from django.db import models
 from players.models import IPL_Player
+
 # Create your models here.
 class Franchise(models.Model):
     name = models.CharField(max_length=100)
@@ -44,3 +45,23 @@ class FranchisePlaying11(models.Model):
 
     def __str__(self):
         return f"{self.franchise.short_name} - {self.player.name}"
+
+class MatchPlaying11(models.Model):
+    match = models.ForeignKey("matches.Match", on_delete=models.CASCADE, related_name="playing11")
+    franchise = models.ForeignKey(Franchise, on_delete=models.CASCADE)
+    player = models.ForeignKey(IPL_Player, on_delete=models.CASCADE)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["player"],
+                name="unique_player_match_playing11"
+            )
+        ]
+
+    def __str__(self):
+        return (
+            f"Match {self.match.match_number} - "
+            f"{self.franchise.short_name} - "
+            f"{self.player.name}"
+        )

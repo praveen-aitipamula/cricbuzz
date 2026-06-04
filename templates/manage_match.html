@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>
+    {{ match.team1.short_name }}
+    vs
+    {{ match.team2.short_name }}
+</h1>
+
+<div>
+
+    <h2>
+        {{ match.team1.short_name }} Default XI
+    </h2>
+
+    <ul>
+        {% for player in team1_xi %}
+            <li>{{ player.player.name }}</li>
+        {% endfor %}
+    </ul>
+
+</div>
+
+<hr>
+
+<div>
+
+    <h2>
+        {{ match.team2.short_name }} Default XI
+    </h2>
+
+    <ul>
+        {% for player in team2_xi %}
+            <li>{{ player.player.name }}</li>
+        {% endfor %}
+    </ul>
+
+</div>
+<form method="POST">
+    {% csrf_token %}
+
+    <button type="submit">
+        Confirm Playing XI
+    </button>
+</form>
+
+{% endblock %}
