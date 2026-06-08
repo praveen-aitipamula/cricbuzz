@@ -1002,3 +1002,68 @@ table th {
 .match-container{
     zoom: 85%;
 }
+.points-table-container{
+    max-width:900px;
+    margin:30px auto;
+}
+
+.points-title{
+    text-align:center;
+    color:#009270;
+    margin-bottom:20px;
+    font-size:34px;
+}
+
+.points-table{
+    width:50%;
+    border-collapse:collapse;
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.points-table thead{
+    background:#009270;
+    color:white;
+}
+
+.points-table th{
+    padding:14px;
+    font-size:15px;
+    text-transform:uppercase;
+}
+
+.points-table td{
+    padding:12px;
+    text-align:center;
+    border-bottom:1px solid #eee;
+    font-size:15px;
+}
+
+.points-table tbody tr:hover{
+    background:#f5fbf9;
+}
+
+.team-cell{
+    font-weight:700;
+    text-align:left;
+    padding-left:25px !important;
+}
+
+.points-cell{
+    font-weight:700;
+    color:#009270;
+}
+
+.points-table tbody tr:nth-child(1){
+    background:#e9fff8;
+}
+
+.points-table tbody tr:nth-child(2){
+    background:#f6fffc;
+}
+
+.points-table tbody tr:nth-child(3){
+    background:#fbfffe;
+}

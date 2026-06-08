@@ -54,7 +54,7 @@ class MatchPlaying11(models.Model):
     class Meta:
         constraints = [
             models.UniqueConstraint(
-                fields=["player"],
+                fields=["match","player"],
                 name="unique_player_match_playing11"
             )
         ]
