@@ -1,8 +1,11 @@
 from multiprocessing import context
 
 from django.shortcuts import redirect, render
-from .models import Match
+
+from franchises.views import franchise
+from .models import Match, Franchise
 from franchises.models import FranchisePlaying11,MatchPlaying11
+from django.db.models import Q
 
 def MatchListView(request):
     matches = Match.objects.all()
@@ -104,3 +107,40 @@ def MatchResultView(request, pk):
     }
     return render(request, "match_result.html", context)
     
+
+def PointsTableView(request):
+    table =[]
+    
+    franchises = Franchise.objects.all()
+
+    
+
+    for franchise in franchises:
+        played = Match.objects.filter(status="Completed").filter(Q(team1=franchise)|Q(team2=franchise)).count()
+
+        won = Match.objects.filter(status="Completed",winner=franchise).count()
+
+        lost = played-won
+
+        points = int(won) * 2
+
+        table.append({
+            "team": franchise,
+            "played": played,
+            "won": won,
+            "lost": lost,
+            "points": points,
+        })
+        table = sorted(
+            table,
+            key=lambda x: x["points"],
+            reverse=True
+        )
+
+        context={
+            "table": table,
+        }
+
+    
+    return render(request,"points_table.html",context)
+
