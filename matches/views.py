@@ -3,9 +3,11 @@ from multiprocessing import context
 from django.shortcuts import redirect, render
 
 from franchises.views import franchise
+from matches.utils import get_points_table
 from .models import Match, Franchise
 from franchises.models import FranchisePlaying11,MatchPlaying11
 from django.db.models import Q
+from matches.utils import get_points_table
 
 def MatchListView(request):
     matches = Match.objects.all()
@@ -109,6 +111,7 @@ def MatchResultView(request, pk):
     
 
 def PointsTableView(request):
+<<<<<<< Updated upstream
     table =[]
     
     franchises = Franchise.objects.all()
@@ -168,6 +171,12 @@ def PointsTableView(request):
             "table": table,
         }
 
+=======
+    table = get_points_table()
+    context={
+        "table":table
+    }
+>>>>>>> Stashed changes
     
     return render(request,"points_table.html",context)
 

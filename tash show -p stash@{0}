@@ -1,0 +1,26 @@
+*   [33mc71d21f[m[33m ([m[1;35mrefs/stash[m[33m)[m WIP on main: 984b482 Merge pull request #2 from praveen-aitipamula/feature/points-table
+[31m|[m[32m\[m  
+[31m|[m * [33m5754157[m index on main: 984b482 Merge pull request #2 from praveen-aitipamula/feature/points-table
+[31m|[m[31m/[m  
+[31m|[m * [33m785d04b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Merge pull request #3 from praveen-aitipamula/feature/nrr
+[31m|[m[31m/[m[34m|[m 
+[31m|[m * [33md65f0f7[m[33m ([m[1;31morigin/feature/nrr[m[33m)[m NRR added to points table
+[31m|[m[31m/[m  
+*   [33m984b482[m Merge pull request #2 from praveen-aitipamula/feature/points-table
+[35m|[m[36m\[m  
+[35m|[m * [33mea0c36e[m[33m ([m[1;31morigin/feature/points-table[m[33m)[m points table implemented
+[35m|[m[35m/[m  
+*   [33m2e8b4d6[m Merge pull request #1 from praveen-aitipamula/feature/match-result
+[1;31m|[m[1;32m\[m  
+[1;31m|[m * [33m5e4a870[m[33m ([m[1;31morigin/feature/match-result[m[33m)[m match results implemented
+[1;31m|[m * [33me662059[m updated match model for winner details able to fileds in admin
+[1;31m|[m[1;31m/[m  
+* [33m733df5c[m matchplayingXI created
+* [33m3e7375a[m Add match details, playing 11 feature, and CSV data import
+* [33m26b355a[m Completed venue module
+* [33m1b34b23[m Completed franchise squads and player profile pages
+* [33m21bfb5c[m Created Franchises, IPL-Players, FranchiseSquad
+* [33m649b16d[m menubar teams section implemented
+* [33mb7889ac[m Teams model added
+* [33mf068641[m Added Navbar layout
+* [33m82089ec[m Cricbuzz initial setup done
