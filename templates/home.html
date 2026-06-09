@@ -1,52 +1,113 @@
 {% extends "base.html" %}
 {% block content %}
-    
-    <div class="container">
+<div class="homepage-wrapper">
 
-    <section class="section">
-        <h2>Live Matches</h2>
+    <!-- RECENT MATCHES -->
 
-        <div class="card">
-            <h3>RCB vs CSK</h3>
-            <p>RCB - 185/5 (20)</p>
-            <p>CSK - 180/8 (20)</p>
-            <strong>RCB won by 5 runs</strong>
+    <div class="homepage-recent-column">
+
+        <h2 class="homepage-heading">
+            Recent Matches
+        </h2>
+
+        {% for match in matches %}
+
+        <div class="homepage-recent-card">
+
+            <div class="homepage-series">
+                IPL 2026
+            </div>
+
+            <div class="homepage-team-row">
+                <span>{{ match.team1.short_name }}</span>
+
+                <span>
+                    {{ match.team1_score }}/{{ match.team1_wickets }}
+                </span>
+            </div>
+
+            <div class="homepage-team-row">
+                <span>{{ match.team2.short_name }}</span>
+
+                <span>
+                    {{ match.team2_score }}/{{ match.team2_wickets }}
+                </span>
+            </div>
+
+            <div class="homepage-result">
+                {{ match.result }}
+            </div>
+
         </div>
-    </section>
 
-    <section class="section">
-        <h2>Upcoming Matches</h2>
+        {% endfor %}
 
-        <div class="card">
-            <h3>MI vs SRH</h3>
-            <p>Tomorrow - 7:30 PM</p>
+    </div>
+
+    <!-- UPCOMING MATCHES -->
+
+    <div class="homepage-upcoming-column">
+
+        <h2 class="homepage-heading">
+            Upcoming Matches
+        </h2>
+
+        {% for match in upcoming_matches %}
+
+        <div class="homepage-upcoming-card">
+
+            <h4>
+                {{ match.team1.short_name }}
+                vs
+                {{ match.team2.short_name }}
+            </h4>
+
+            <p>
+                {{ match.venue.name }}
+            </p>
+
+            <span>
+                {{ match.date }}
+            </span>
+
         </div>
-    </section>
 
-    <section class="section">
-        <h2>IPL Points Table</h2>
+        {% endfor %}
 
-        <table class="points-table">
+    </div>
 
-        <thead>
-            <tr>
-                <th>Pos</th>
-                <th>Team</th>
-                <th>P</th>
-                <th>W</th>
-                <th>L</th>
-                <th>Pts</th>
-                <th>NRR</th>
-            </tr>
-        </thead>
+    <!-- POINTS TABLE -->
 
-        <tbody>
+    <div class="homepage-points-column">
 
-            {% for row in table %}
+        <h2 class="homepage-heading">
+            IPL Points Table
+        </h2>
 
-            <tr>
+        <table class="homepage-points-table">
 
-                <td>{{ forloop.counter }}</td>
+            <thead>
+
+                <tr>
+                    <th>Pos</th>
+                    <th>Team</th>
+                    <th>P</th>
+                    <th>W</th>
+                    <th>L</th>
+                    <th>Pts</th>
+                    <th>NRR</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                {% for row in table %}
+
+                <tr>
+
+                    <td>{{ forloop.counter }}</td>
 
                 <td class="team-cell">
                     {{ row.team.short_name }}
@@ -64,24 +125,18 @@
                 <td>{{row.nrr}}
                 </td>
 
-            </tr>
+                </tr>
 
-            {% endfor %}
+                {% endfor %}
 
-        </tbody>
+            </tbody>
 
-    </table>
-    </section>
+        </table>
 
-    <section class="section">
-        <h2>Top Players</h2>
-
-        <div class="card">
-            <p>Virat Kohli - 650 Runs</p>
-            <p>Jasprit Bumrah - 22 Wickets</p>
-        </div>
-    </section>
+    </div>
 
 </div>
+    
+
     
 {% endblock %}
