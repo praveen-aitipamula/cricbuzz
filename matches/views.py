@@ -73,25 +73,56 @@ def MatchResultView(request, pk):
         match.team2_score = int(request.POST.get("team2_score"))
         match.team2_wickets = int(request.POST.get("team2_wickets"))
         match.team2_overs = request.POST.get("team2_overs")
-        if match.team1_score > match.team2_score:   
-            match.winner = match.team1
-            match.result = (
-                f"{match.team1.short_name} won by "
-                f"{match.team1_score - match.team2_score} runs"
-            )
+        match.batting_first_id = request.POST.get("batting_first")
 
+        if match.batting_first == match.team1:
+            if match.team1_score > match.team2_score:
+                match.winner = match.team1
+                match.result = (
+                    f"{match.team1.short_name} won by "
+                    f"{match.team1_score - match.team2_score -1} runs"
+                )
+            else:
+                wickets_remaning = 10 - match.team2_wickets
+                match.winner = match.team2
+                match.result =(
+                    f"{match.team2.short_name} won by "
+                    f"{wickets_remaning} wickets"
+                )
         else:
+            if match.team2_score > match.team1_score:
+                match.winner = match.team2
+                match.result=(
+                    f"{match.team2.short_name} won by "
+                    f"{match.team2_score - match.team1_score-1} runs"
+                )
+            else:
+                wickets_remaning = 10 - match.team1_wickets
+                match.winner = match.team1
+                match.result=(
+                    f"{match.team1.short_name} won by "
+                    f"{wickets_remaning} wickets"
+                )
 
-            match.winner = match.team2
+        # if match.team1_score > match.team2_score:   
+        #     match.winner = match.team1
+        #     match.result = (
+        #         f"{match.team1.short_name} won by "
+        #         f"{match.team1_score - match.team2_score} runs"
+        #     )
 
-            wickets_remaining = (
-                10 - int(request.POST.get("team2_wickets"))
-            )
+        # else:
 
-            match.result = (
-                f"{match.team2.short_name} won by "
-                f"{wickets_remaining} wickets"
-            )
+        #     match.winner = match.team2
+
+        #     wickets_remaining = (
+        #         10 - int(request.POST.get("team2_wickets"))
+        #     )
+
+        #     match.result = (
+        #         f"{match.team2.short_name} won by "
+        #         f"{wickets_remaining} wickets"
+        #     )
 
 
         

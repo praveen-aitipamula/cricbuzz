@@ -1311,7 +1311,7 @@ table th {
 
 .homepage-upcoming-card span{
     color:#009270;
-    font-weight:600;
+    font-weight:500;
 }
 
 /* POINTS TABLE */
@@ -1335,4 +1335,7 @@ table th {
     padding:10px;
     text-align:center;
     border-bottom:1px solid #eee;
+}
+.match_color{
+    color: red;
 }
