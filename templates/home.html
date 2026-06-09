@@ -26,27 +26,51 @@
     <section class="section">
         <h2>IPL Points Table</h2>
 
-        <table>
+        <table class="points-table">
+
+        <thead>
             <tr>
+                <th>Pos</th>
                 <th>Team</th>
+                <th>P</th>
+                <th>W</th>
+                <th>L</th>
                 <th>Pts</th>
+                <th>NRR</th>
             </tr>
+        </thead>
+
+        <tbody>
+
+            {% for row in table %}
 
             <tr>
-                <td>RCB</td>
-                <td>18</td>
+
+                <td>{{ forloop.counter }}</td>
+
+                <td class="team-cell">
+                    {{ row.team.short_name }}
+                </td>
+
+                <td>{{ row.played }}</td>
+
+                <td>{{ row.won }}</td>
+
+                <td>{{ row.lost }}</td>
+
+                <td class="points-cell">
+                    {{ row.points }}
+                </td>
+                <td>{{row.nrr}}
+                </td>
+
             </tr>
 
-            <tr>
-                <td>GT</td>
-                <td>16</td>
-            </tr>
+            {% endfor %}
 
-            <tr>
-                <td>MI</td>
-                <td>14</td>
-            </tr>
-        </table>
+        </tbody>
+
+    </table>
     </section>
 
     <section class="section">
