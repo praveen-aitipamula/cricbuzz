@@ -19,6 +19,7 @@ class Match(models.Model):
     team2_wickets = models.IntegerField(blank=True, null=True)  
     team2_overs = models.DecimalField(max_digits=4, decimal_places=1, blank=True, null=True)
     result = models.TextField(blank=True, null=True)
+    batting_first = models.ForeignKey(Franchise,on_delete=models.SET_NULL, blank=True, null=True, related_name="batting_first_matches")
 
     def __str__(self):
         return f"Match {self.match_number}: {self.team1.short_name} vs {self.team2.short_name} at {self.venue.name} on {self.match_date}"
